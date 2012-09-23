@@ -413,8 +413,7 @@ int main(void)
 		flash_program_option_bytes(FLASH_OBP_RDP, FLASH_OBP_RDP_KEY);
 		flash_program_option_bytes(FLASH_OBP_WRP10, 0x03FC);
 	}
-
-	//rcc_clock_setup_in_hse_12mhz_out_72mhz();
+  
 	rcc_clock_setup_in_hsi_out_48mhz();
 
 	rcc_peripheral_enable_clock(&RCC_AHBENR, RCC_AHBENR_OTGFSEN);
