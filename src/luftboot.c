@@ -461,7 +461,7 @@ int main(void)
 
 	get_dev_unique_id(serial_no);
 
-	usbd_device *device = usbd_init(&stm32f107_usb_driver, &dev, &config, usb_strings);
+	usbd_device *device = usbd_init(&stm32f107_usb_driver, &dev, &config, usb_strings, 5);
 	usbd_set_control_buffer_size(device, sizeof(usbd_control_buffer));
 	usbd_register_control_callback( device,
 				USB_REQ_TYPE_CLASS | USB_REQ_TYPE_INTERFACE,
